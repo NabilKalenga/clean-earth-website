@@ -137,19 +137,22 @@ font-weight:bold;
 
 <h2>Send a Message</h2>
 
-<form>
+<form action="https://formspree.io/f/xvzwbqoy" method="POST">
+  <!-- Replace yourformid with the Formspree URL Form ID -->
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-<label>Name:</label>
-<input type="text" placeholder="Your Name">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-<label>Email:</label>
-<input type="email" placeholder="Your Email">
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
 
-<label>Message:</label>
-<textarea rows="5" placeholder="Type your message here..."></textarea>
+  <!-- Redirect to Thank You page -->
+  <input type="hidden" name="_next" value="thankyou.html">
 
-<button type="submit">Send</button>
-
+  <button type="submit">Send</button>
 </form>
 
 </main>
